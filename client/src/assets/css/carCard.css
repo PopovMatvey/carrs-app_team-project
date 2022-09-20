@@ -1,0 +1,69 @@
+.car-card-item {
+    width: 300px;
+    height: auto;
+    margin: 10px 20px 20px 20px;
+}
+
+.car-card-item img{
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: 0.5s all;
+}
+
+.car-card-item img:hover{
+    transform: scale(1.1);
+}
+
+.car-card-item h3{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.car-card-item_stats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.car-card-item_stats div{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.car-card-item_stats div img{
+    width: 40px;
+    height: auto;
+}
+
+.car-card-item_stats div h6{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.car-card-item_stats div span{
+    font-size: 14px;
+}
+
+.car-card-item a{
+    display: block;
+    width: 100%;
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0px 15px 0px;
+    transition: 1s all;
+}
+
+.car-card-item a:visited{
+    color: #fff;
+}
+
+.car-card-item a:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
