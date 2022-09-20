@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Commands install npm
+npm i bootstrap
+npm i react
+npm i react-dom
+npm i react-scripts
+npm i typescript
+npm i web-vitals
+
 ## Available Scripts
 
 In the project directory, you can run:
