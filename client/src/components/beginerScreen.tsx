@@ -1,4 +1,5 @@
 import '../assets/css/beginnerScreen.css';
+import React from 'react';
 
 export function BeginnerScreen() {
     return (

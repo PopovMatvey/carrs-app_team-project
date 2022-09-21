@@ -1,5 +1,6 @@
 import { ILogoProps } from "../types/ILogoProps";
 import '../assets/css/footer.css'
+import React from 'react';
 
 export function Footer({ logo }: ILogoProps) {
     return (

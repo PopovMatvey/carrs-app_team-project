@@ -3,19 +3,9 @@ import transmissionImg from '../assets/images/transmission.png';
 import placesImg from '../assets/images/places.png';
 import '../assets/css/carCard.css';
 import { CarCardProps } from '../types/ICarCardProps';
+import React from 'react';
 
 export function CarCard({ carItem }: CarCardProps) {
-
-
-    // const hendlerReserveButton:  MouseEventHandler<HTMLAnchorElement> | undefined = () => {
-    //     console.log(carItem.nameCar);
-    //     const carInput = document.querySelector('#carInput');
-    //     console.log(carInput);
-    //     inputCarValue = carInput;
-    //     // setCarInput()
-    //     // carInput.value = carItem.nameCar;
-    // }
-
     return (
         <div className="car-card-item">
             <img src={carItem.image} alt="" />
@@ -38,11 +28,12 @@ export function CarCard({ carItem }: CarCardProps) {
                 </div>
             </div>
             <a href="#ReserveForm"
-            // onClick={hendlerReserveButton}
+                // onClick={hendlerReserveButton}
             >
                 Забронировать
             </a>
         </div>
     );
 }
+
 

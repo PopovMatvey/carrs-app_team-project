@@ -1,5 +1,6 @@
 import { ILogoProps } from '../types/ILogoProps';
 import '../assets/css/header.css';
+import React from 'react';
 
 export function Header({ logo }: ILogoProps) {
     return (
