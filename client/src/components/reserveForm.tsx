@@ -1,12 +1,15 @@
-import React,{ useState } from 'react';
+import React,{ useEffect } from 'react';
 import rollsImg from '../assets/images/rolls.png';
 import '../assets/css/reserveForm.css';
+import { ReserveFormState } from '../hook/reserveFormStates';
 
 export function ReserveForm() {
-    const [disabled,setDisabled] = useState(true);
-    const [nameInput,setNameInput] = useState('');
-    const [phoneInput,setPhoneInput] = useState('');
-    const [carInput,setCarInput] = useState('');
+    const {
+        disabled,setDisabled,
+        nameInput,setNameInput,
+        phoneInput,setPhoneInput,
+        carInput,setCarInput,
+    } = ReserveFormState();
 
     const checkDisableSubmit = (element: HTMLInputElement) => {
         if ((nameInput !== '') && (phoneInput !== '') && (carInput !== '')) {
@@ -48,6 +51,12 @@ export function ReserveForm() {
         disableSubmit(event.target.value,event.target);
     }
 
+    useEffect(() => {
+        // $('#phoneInput').mask("+7(999) 999-9999");
+        // console.log($('#carInput').mask("+7(999) 999-9999"));
+        // $('#carInput').mask("0000 0000 0000 0000");
+    })
+
     return (
         <div className='reserve-form' id='ReserveForm'>
             <div className="reserve-form_text">
@@ -56,9 +65,9 @@ export function ReserveForm() {
             </div>
             <div className="reserve-form_container">
                 <form action="" id='reserveForm' method='post' onSubmit={e => { e.preventDefault(); }}>
-                    <input type="text" placeholder='Ваше имя' id='nameInput' value={nameInput} onChange={hendlerNameInput} />
-                    <input type="text" placeholder='Ваш телефон' id='phoneInput' value={phoneInput} onChange={hendlerPhoneInput} />
-                    <input type="text" placeholder='Автомобиль, который Вас интересует' id='carInput' value={carInput} onChange={hendlerCarInput} />
+                    <input type="text" required placeholder='Ваше имя' id='nameInput' value={nameInput} onChange={hendlerNameInput} />
+                    <input type='phone'required placeholder='Ваш телефон' id='phoneInput' value={phoneInput} onChange={hendlerPhoneInput} />
+                    <input type="text" required placeholder='Автомобиль, который Вас интересует' id='carInput' value={carInput} onChange={hendlerCarInput} />
                     <input type='submit' id='submitButton' value='Узнать цену' disabled={disabled} />
                 </form>
             </div>
