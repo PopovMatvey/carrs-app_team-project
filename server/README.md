@@ -1,7 +1,3 @@
 # Commands for run server
 
-python manage.py makemigrations
-
-python manage.py migrate
-
-python manage.py runserver
+docker-compose up -d --build
