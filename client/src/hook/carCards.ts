@@ -6,7 +6,7 @@ export function useCarCard() {
 
     async function featchCardCard() {
         try {
-            const response = await axios.get('https://fakestoreapi.com/products?limit=5');
+            const response = await axios.get('http://localhost:8000/products/');
 
             setArrayCarCards(response.data);
         } catch (error) {

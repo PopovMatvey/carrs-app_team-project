@@ -9,7 +9,7 @@ export function CarCard({ carItem }: CarCardProps) {
     return (
         <div className="car-card-item">
             <img src={carItem.image} alt="" />
-            <h3>{carItem.nameCar}</h3>
+            <h3>{carItem.car_name}</h3>
             <div className="car-card-item_stats">
                 <div>
                     <img src={groupImg} alt="" />

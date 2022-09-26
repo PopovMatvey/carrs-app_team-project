@@ -24,3 +24,9 @@ yarn-error.log*
 
 # cache
 *.pyc
+
+# env
+/env
+
+# migrations
+/migrations

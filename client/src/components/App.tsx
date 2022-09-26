@@ -9,13 +9,15 @@ import React from 'react';
 function App() {   
   const { arrayCarCards } = useCarCard(); 
   console.log(arrayCarCards);
+  arrayCarCards.map(carItem=>{console.log(carItem)})
   return (
 
     <div className='app-content'>
       <BeginnerScreen />
-      <CarsAssirtiment>
-        {arrayCars.map(carItem => <CarCard key={carItem.id} carItem={carItem}/>)}
+       <CarsAssirtiment>
+        {arrayCarCards.map(carItem => <CarCard carItem={carItem}/>)}
       </CarsAssirtiment>
+
       <ReserveForm />
     </div>
   );

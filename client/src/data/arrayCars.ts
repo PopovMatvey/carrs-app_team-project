@@ -4,7 +4,7 @@ export const arrayCars: ICarCard[] = [
     {
         id: 1,
         image: "/images/1.png",
-        nameCar: "Lamborghini Huracan Spyde",
+        car_name: "Lamborghini Huracan Spyde",
         gear: "Полный",
         engine: 5.2,
         places: 2,
@@ -12,7 +12,7 @@ export const arrayCars: ICarCard[] = [
     {
         id: 2,
         image: "/images/2.png",
-        nameCar: "Shevrolet Corvette",
+        car_name: "Shevrolet Corvette",
         gear: "Полный",
         engine: 5.2,
         places: 2,
@@ -20,7 +20,7 @@ export const arrayCars: ICarCard[] = [
     {
         id: 3,
         image: "/images/3.png",
-        nameCar: "Ferrari California",
+        car_name: "Ferrari California",
         gear: "Полный",
         engine: 5.2,
         places: 2,
@@ -28,7 +28,7 @@ export const arrayCars: ICarCard[] = [
     {
         id: 4,
         image: "/images/4.png",
-        nameCar: "Lamborghini Urus",
+        car_name: "Lamborghini Urus",
         gear: "Полный",
         engine: 5.2,
         places: 2,
@@ -36,7 +36,7 @@ export const arrayCars: ICarCard[] = [
     {
         id: 5,
         image: "/images/5.png",
-        nameCar: "Audi R8",
+        car_name: "Audi R8",
         gear: "Полный",
         engine: 5.2,
         places: 2,
@@ -44,7 +44,7 @@ export const arrayCars: ICarCard[] = [
     {
         id: 6,
         image: "/images/6.png",
-        nameCar: "Lamborghini Huracan Spyde",
+        car_name: "Lamborghini Huracan Spyde",
         gear: "Полный",
         engine: 5.2,
         places: 2,
