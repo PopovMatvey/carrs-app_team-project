@@ -1,0 +1,81 @@
+.beginner-screen {
+    height: 700px;
+    width: 100%;
+    background: url('../images/background.png') no-repeat;
+}
+
+.beginner-screen_information {
+    margin: 30px 0px 0px 60px;
+}
+
+.beginner-screen h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.beginner-screen_information-text {
+    width: 600px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 15px 80px 0px 0px;
+    margin-bottom: 20px;
+}
+
+.beginner-screen_information_button-container {
+    padding-top: 20px;
+}
+
+.beginner-screen a {
+    padding: 20px 40px 20px 40px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    transition: 1s all;
+}
+
+.beginner-screen a:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.beginner-screen a:visited {
+    color: #fff;
+}
+
+@media screen and (max-width:600px) {
+    .beginner-screen h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .beginner-screen_information {
+        margin: auto;
+    }
+
+    .beginner-screen_information-text {
+        width: 100%;
+        padding-left: 50px;
+    }
+
+    .beginner-screen_information_button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .beginner-screen h1 {
+        font-size: 30px;
+    }
+
+    .beginner-screen a {
+        padding: 15px 20px 15px 20px;
+        font-size: 14px;
+    }
+}
+
+.beginner-screen_information span {
+    margin-top: 50px;
+}
