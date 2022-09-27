@@ -132,7 +132,6 @@ export function ReserveForm({ arrayCars }: IReserveFormProps) {
         );
     }
 
-
     return (
         <div className='reserve-form' id='ReserveForm'>
             <div className="reserve-form_text">
