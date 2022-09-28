@@ -8,7 +8,7 @@ import React from 'react';
 export function CarCard({ carItem }: ICarCardProps) {
     return (
         <div className="car-card-item">
-            <img src={carItem.image} alt="" />
+            <img src={'http://localhost:8000'+carItem.image} alt="" />
             <h3>{carItem.car_name}</h3>
             <div className="car-card-item_stats">
                 <div>
