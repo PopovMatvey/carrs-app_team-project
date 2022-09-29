@@ -1,17 +1,23 @@
-import React,{ FormEvent,useContext,useEffect,useState } from 'react';
-import rollsImg from '../assets/images/rolls.png';
+import React,{ FormEvent,useEffect,useState } from 'react';
 import '../assets/css/reserveForm.css';
-import { ReserveFormState } from '../hook/reserveFormStates';
+import rollsImg from '../assets/images/rolls.png';
 import { useMailReserveForm } from '../hook/mailReserveForm';
-import { objectPost } from '../data/objectPost';
-import { IReserveFormProps } from '../types/IReserveFormProps';
+import { ReserveFormState } from '../hook/reserveFormStates';
 
 
-export function ReserveForm({ arrayCars }: IReserveFormProps) {
+export function ReserveForm() {
     const lengthPhoneNumber = 11;
-    const [postObject,setPostObject] = useState(objectPost);
-    const [imgRolls,setimgRolls] = useState(<img src={rollsImg} alt="" />);
-    const [notification,setNotification] = useState(<span className='notification'></span>);
+    const minLengthPhoneNumber = 2;
+    const defaultDisableSubmitButton = false;
+    const defaultNameInputValue = '';
+    const defaulPhoneInputValue = '+7';
+    const defaultCarInputValue = '';
+    const clearString = '';
+    const sucsessMailMessage = 'Всё отправлено успешно';
+    const grayBorderStyle = '1px solid #f00';
+    const redBorderStyle = '1px solid #999';
+
+    const [imgRolls] = useState(<img src={rollsImg} alt="" />);
     const { featchMailreserveForm } = useMailReserveForm();
 
     const {
@@ -22,27 +28,28 @@ export function ReserveForm({ arrayCars }: IReserveFormProps) {
     } = ReserveFormState();
 
     const resetFields = () => {
-        setDisabled(false);
-        setNameInput('');
-        setPhoneInput('+7');
-        setCarInput('');
+        setDisabled(defaultDisableSubmitButton);
+        setNameInput(defaultNameInputValue);
+        setPhoneInput(defaulPhoneInputValue);
+        setCarInput(defaultCarInputValue);
     }
 
     const checkDisableSubmit = (element: HTMLInputElement) => {
-        if ((nameInput !== '')
+        if ((nameInput !== clearString)
             && (phoneInput.length >= lengthPhoneNumber)
-            && (carInput !== '')
+            && (carInput !== clearString)
         ) {
-            setDisabled(false);
+            setDisabled(defaultDisableSubmitButton);
             eraseInputField(element);
         }
     }
 
     const getLastInputChart = (string: string) => {
-        return string.split('')[string.length - 1]
+        return string.split(clearString)[string.length - 1]
     }
+
     const disableSubmit = (string: string,element: HTMLInputElement) => {
-        if (string === '') {
+        if (string === clearString) {
             setDisabled(true);
             markInputField(element);
         }
@@ -53,20 +60,21 @@ export function ReserveForm({ arrayCars }: IReserveFormProps) {
             setDisabled(true);
         }
     }
+
     const markInputField = (element: HTMLInputElement) => {
-        element.style.border = '1px solid #f00'
+        element.style.border = grayBorderStyle;
     }
 
     const eraseInputField = (element: HTMLInputElement) => {
-        element.style.border = '1px solid #999'
+        element.style.border = redBorderStyle;
     }
 
     const checkOnVoid = (element: HTMLInputElement) => {
-        if (element.value !== '') {
+        if (element.value !== clearString) {
             eraseInputField(element);
         }
     }
-    
+
     const hendlerNameInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         setNameInput(event.target.value);
         checkDisableSubmit(event.target);
@@ -86,6 +94,7 @@ export function ReserveForm({ arrayCars }: IReserveFormProps) {
 
         return false;
     }
+
     const hendlerPhoneInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         checkDisableSubmit(event.target);
         disableSubmit(event.target.value,event.target);
@@ -94,7 +103,7 @@ export function ReserveForm({ arrayCars }: IReserveFormProps) {
 
         if (!checkOnNumber(getLastInputChart(event.target.value)) ||
             event.target.value.length - 1 > lengthPhoneNumber ||
-            event.target.value.length < 2) {
+            event.target.value.length < minLengthPhoneNumber) {
 
             return;
         }
@@ -112,10 +121,6 @@ export function ReserveForm({ arrayCars }: IReserveFormProps) {
         checkOnVoid(event.target);
     }
 
-    useEffect(() => {
-        setCarInput(carInput);
-    },[carInput])
-
     const getPostdObject = () => {
         return {
             'client': nameInput,
@@ -124,32 +129,34 @@ export function ReserveForm({ arrayCars }: IReserveFormProps) {
         }
     }
 
-    const heandlerSubmitReserveForm = (event: FormEvent<HTMLFormElement>) => {
-        alert('Всё отправлено успешно');
+    const heandlerSubmitReserveForm = () => {
+        alert(sucsessMailMessage);
         resetFields();
         featchMailreserveForm(
             getPostdObject()
         );
     }
 
+    useEffect(() => {
+        setCarInput(carInput);
+    },[carInput])
+
     return (
         <div className='reserve-form' id='ReserveForm'>
             <div className="reserve-form_text">
                 <h2>Узнать цену и забронировать</h2>
-                <span>Заполните данные, и мы перезвоним вам для уточнения всех деталей бронирования</span>
+                <span>
+                    Заполните данные, и мы перезвоним вам для уточнения всех деталей бронирования
+                </span>
             </div>
             <div className="reserve-form_container">
                 <form action="" id='reserveForm' method='post' onSubmit={event => {
                     event.preventDefault();
-                    heandlerSubmitReserveForm(event);
+                    heandlerSubmitReserveForm();
                 }}>
                     <input type="text" required placeholder='Ваше имя' id='nameInput' value={nameInput} onChange={hendlerNameInput} />
                     <input type='phone' required placeholder='Ваш телефон' id='phoneInput' value={phoneInput} onChange={hendlerPhoneInput} />
-                    {notification}
                     <input type="text" required placeholder='Автомобиль, который Вас интересует' id='carInput' value={carInput} onChange={hendlerCarInput} />
-                    {/* <select onChange={hendlerCarInput}>
-                        {arrayCars.map(carItem => <option key={carItem.car_name} value={carItem.car_name}>{carItem.car_name}</option>)}
-                    </select> */}
                     <input type='submit' id='submitButton' value='Узнать цену' disabled={disabled} />
                 </form>
             </div>

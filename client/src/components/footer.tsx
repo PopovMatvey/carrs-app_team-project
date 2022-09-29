@@ -1,14 +1,14 @@
-import { ILogoProps } from "../types/ILogoProps";
-import '../assets/css/footer.css'
 import React from 'react';
+import '../assets/css/footer.css'
+import { ILogoProps } from "../types/ILogoProps";
 
 export function Footer({ logo }: ILogoProps) {
     return (
         <footer>
-            <div className="div">
-                <img src={logo} alt="" />
+            <div>
+                <img src={logo} alt="Лого станицы" className='logo'/>
             </div>
-            <div className="div">
+            <div>
                 <span>Все права защищены</span>
             </div>
         </footer>

@@ -1,5 +1,5 @@
-import '../assets/css/beginnerScreen.css';
 import React from 'react';
+import '../assets/css/beginnerScreen.css';
 
 export function BeginnerScreen() {
     return (

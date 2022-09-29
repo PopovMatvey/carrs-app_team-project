@@ -1,5 +1,5 @@
 import { ICarsAssortimentProps } from "../types/ICarsAssortimentProps";
-import '../assets/css/carsAssirtiment.css'
+import '../assets/css/carsAssirtiment.css';
 import React from 'react';
 
 export function CarsAssirtiment({ children }: ICarsAssortimentProps) {
