@@ -21,4 +21,4 @@ COPY ./entrypoint.sh .
 COPY . .
 
 # run entrypoint.sh
-ENTRYPOINT ["./carrs-app_team-project/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
