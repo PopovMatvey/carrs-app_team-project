@@ -3,7 +3,7 @@ version: '3.7'
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 45.84.225.230:8000
     volumes:
       - .:/carrs-app_team-project
     ports:
