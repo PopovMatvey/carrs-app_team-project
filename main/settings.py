@@ -26,7 +26,7 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    os.environ.get("DJANGO_ALLOWED_HOSTS"),
+    os.environ.get("DJANGO_ALLOWED_HOSTS").split(' '),
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
