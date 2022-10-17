@@ -23,9 +23,14 @@ services:
 
   nginx:
     build: ./nginx
+    vodumes:
+      -static_volume:/var/www/html/static
+      -media_volume:/var/www/html/media
     ports:
       - 1337:80
     depends_on:
       - web
 volumes:
   postgres_data:
+  static_volume:
+  media_volume:
