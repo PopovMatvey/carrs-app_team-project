@@ -23,7 +23,7 @@ services:
 
   nginx:
     build: ./nginx
-    vodumes:
+    volumes:
       -static_volume:/var/www/html/static
       -media_volume:/var/www/html/media
     ports:
