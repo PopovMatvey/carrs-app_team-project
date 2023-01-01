@@ -7,7 +7,7 @@ import placesImg from '../assets/images/places.png';
 import { hostUrl } from '../data/urlsData';
 
 export function CarCard({ carItem }: ICarCardProps) {
-    const preUrlImageCar = hostUrl;
+    const preUrlImageCar = "";//hostUrl;
 
     return (
         <div className="car-card-item">
