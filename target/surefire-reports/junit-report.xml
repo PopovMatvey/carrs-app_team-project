@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="21.949279">
+<testcase classname="Нахождение формы связи" name="Пользователь ищет форму связи" time="16.928351">
+<system-out><![CDATA[Given Пользователь переходит на основную страницу...........................passed
+When Пользователь скроллит вниз.............................................passed
+Then Пользователь нашёл форму...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Нахождение формы связи" name="Пользователь переходит на основную страницу" time="5.020928">
+<system-out><![CDATA[Given Пользователь переходит на основную страницу...........................passed
+When Пользователь скроллит вниз.............................................passed
+Then Пользователь не нашёл форму............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
