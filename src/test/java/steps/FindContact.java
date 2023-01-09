@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class MySteps extends  DefaultSteps {
+public class FindContact extends  DefaultSteps {
 
     @Before
     public void before(){ init(); }

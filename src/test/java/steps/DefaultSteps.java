@@ -1,5 +1,8 @@
 package steps;
 
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,15 +24,4 @@ public class DefaultSteps {
         driver.quit();
     }
 
-//    public void auth(String email,String password ){
-//        driver.get("http://localhost:3000/");
-//
-//        WebElement emailInput = driver.findElement(By.id("email"));
-//        WebElement passwordInput = driver.findElement(By.id("password"));
-//        WebElement buttonSingIn = driver.findElement(By.xpath("//*[@id=\"root\"]/main/div/form/button"));
-//
-//        emailInput.sendKeys(email);
-//        passwordInput.sendKeys(password);
-//        buttonSingIn.click();
-//    }
 }
