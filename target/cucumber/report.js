@@ -1,4 +1,149 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/findContactForm.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/checkMainMenuItem.feature");
+formatter.feature({
+  "name": "Перейти к главному экрану через меню",
+  "description": "",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@withdraval"
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Пользователь переходит к главному экрану",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@withdraval"
+    },
+    {
+      "name": "@sucsess"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Пользователь находит пункт \u0027Главная\u0027 в меню",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GoToMainScreen.Пользователь_Находит_Пункт_Главная_В_Меню()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Пользователь нажимает на пункт \u0027Главная\u0027",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "GoToMainScreen.Пользователь_Нажимает_На_Пункт_Главная()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Пользователь перешёл к главному экрану",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "GoToMainScreen.Пользователь_Перешёл_К_Главному_Экрану()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@withdraval"
+    },
+    {
+      "name": "@fail"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Пользователь находит пункт \u0027Главная\u0027 в меню",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GoToMainScreen.Пользователь_Находит_Пункт_Главная_В_Меню()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Пользователь нажимает на пункт \u0027Главная\u0027",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "GoToMainScreen.Пользователь_Нажимает_На_Пункт_Главная()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Пользователь не перешёл к главному экрану",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "GoToMainScreen.Пользователь_Не_Перешёл_К_Ассортименту()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("src/test/resources/features/findContactForm.feature");
 formatter.feature({
   "name": "Нахождение формы связи",
   "description": "",
@@ -21,6 +166,9 @@ formatter.scenario({
       "name": "@success"
     }
   ]
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -70,6 +218,9 @@ formatter.after({
 formatter.after({
   "status": "passed"
 });
+formatter.after({
+  "status": "passed"
+});
 formatter.scenario({
   "name": "Пользователь ищет форму связи",
   "description": "",
@@ -82,6 +233,9 @@ formatter.scenario({
       "name": "@fail"
     }
   ]
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -131,6 +285,9 @@ formatter.after({
 formatter.after({
   "status": "passed"
 });
+formatter.after({
+  "status": "passed"
+});
 formatter.uri("src/test/resources/features/goWithAssortiment.feature");
 formatter.feature({
   "name": "Перейти к ассортименту автомобилей",
@@ -164,6 +321,9 @@ formatter.before({
 formatter.before({
   "status": "passed"
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
   "name": "Переход на страницу",
   "keyword": "Given "
@@ -192,6 +352,9 @@ formatter.match({
   "location": "GoToAssortiment.Пользователь_Перешёл_К_Ассортименту()"
 });
 formatter.result({
+  "status": "passed"
+});
+formatter.after({
   "status": "passed"
 });
 formatter.after({
@@ -225,6 +388,9 @@ formatter.before({
 formatter.before({
   "status": "passed"
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
   "name": "Переход на страницу",
   "keyword": "Given "
@@ -246,13 +412,16 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Пользователь перешёл к ассортименту",
+  "name": "Пользователь не перешёл к ассортименту",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "GoToAssortiment.Пользователь_Перешёл_К_Ассортименту()"
+  "location": "GoToAssortiment.Пользователь_Не_Перешёл_К_Ассортименту()"
 });
 formatter.result({
+  "status": "passed"
+});
+formatter.after({
   "status": "passed"
 });
 formatter.after({
@@ -287,6 +456,9 @@ formatter.scenario({
       "name": "@success"
     }
   ]
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -336,6 +508,9 @@ formatter.after({
 formatter.after({
   "status": "passed"
 });
+formatter.after({
+  "status": "passed"
+});
 formatter.scenario({
   "name": "Пользователь не может отправить данные",
   "description": "",
@@ -348,6 +523,9 @@ formatter.scenario({
       "name": "@fail"
     }
   ]
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -386,6 +564,9 @@ formatter.match({
   "location": "SendData.Пользователь_Не_Отправляет_Данные()"
 });
 formatter.result({
+  "status": "passed"
+});
+formatter.after({
   "status": "passed"
 });
 formatter.after({
