@@ -43,6 +43,10 @@
     color: #fff;
 }
 
+.beginner-screen a:visited:hover {
+    color: #000;
+}
+
 @media screen and (max-width:600px) {
     .beginner-screen h1 {
         font-size: 50px;
