@@ -8,6 +8,8 @@ import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SendData extends  DefaultSteps {
     @Before
@@ -28,13 +30,35 @@ public class SendData extends  DefaultSteps {
         WebElement nameInput = driver.findElement(By.id(("nameInput")));
         WebElement phoneInput = driver.findElement(By.id(("phoneInput")));
         WebElement carInput = driver.findElement(By.id(("carInput")));
-        WebElement submitButton = driver.findElement(By.id(("submitButton")));
 
         nameInput.sendKeys("fds");
         phoneInput.sendKeys("9156273829");
         carInput.sendKeys("fds");
-        submitButton.click();
+    }
 
+    @Then("Пользователь отправляет данные")
+    public void Пользователь_Отправляет_Данные(){
+        WebElement nameInput = driver.findElement(By.id(("nameInput")));
+        WebElement phoneInput = driver.findElement(By.id(("phoneInput")));
+        WebElement carInput = driver.findElement(By.id(("carInput")));
+
+        nameInput.sendKeys("fds");
+        phoneInput.sendKeys("9156273829");
+        carInput.sendKeys("fds");
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"submitButton\"]")));
+    }
+
+    @Then("Пользователь не отправляет данные")
+    public void Пользователь_Не_Отправляет_Данные(){
+        WebElement nameInput = driver.findElement(By.id(("nameInput")));
+        WebElement phoneInput = driver.findElement(By.id(("phoneInput")));
+        WebElement carInput = driver.findElement(By.id(("carInput")));
+
+        nameInput.sendKeys("fds");
+        phoneInput.sendKeys("9156273829");
+        carInput.sendKeys("fds");
     }
 
 }
