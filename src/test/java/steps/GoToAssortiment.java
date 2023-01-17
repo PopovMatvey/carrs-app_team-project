@@ -30,6 +30,12 @@ public class GoToAssortiment extends  DefaultSteps {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"mainScreen\"]/div/div[2]/a")));
     }
 
+    @When("Пользователь нажимает на пункт 'Автомобили'")
+    public void Пользователь_Нажимает_На_Пункт_Автомобили(){
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.className("header-menu_item")));
+    }
+
     @Then("Пользователь перешёл к ассортименту")
     public void Пользователь_Перешёл_К_Ассортименту(){
         WebElement assortimentBlock = driver.findElement(By.className("cars-assortiment"));
@@ -39,4 +45,7 @@ public class GoToAssortiment extends  DefaultSteps {
     public void Пользователь_Не_Перешёл_К_Ассортименту(){
         WebElement assortimentBlock = driver.findElement(By.className("beginner-screen"));
     }
+
+
+
 }
