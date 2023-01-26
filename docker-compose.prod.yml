@@ -6,6 +6,9 @@ services:
     command: gunicorn main.wsgi:application --bind 0.0.0.0:8000
     ports:
       - 8000:8000
+    volumes:
+      - static_volume:/DockerBackend/static
+      - media_volume:/DockerBackend/media
     env_file:
       - main/.env.prod
     depends_on:
@@ -21,3 +24,5 @@ services:
 
 volumes:
   postgres_volume:
+  static_volume:
+  media_volume:
