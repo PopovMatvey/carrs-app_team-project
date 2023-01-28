@@ -26,6 +26,12 @@ DEBUG = int(environ.get('DEBUG', default=0))
 
 ALLOWED_HOSTS = str(environ.get('ALLOWED_HOSTS')).split(' ')
 
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOWED_ORIGINS = ['http://62.113.107.56', ]
+
+CSRF_TRUSTED_ORIGINS = ['http://62.113.107.56', 'vps-server.npk-tech.online']
 # Application definition
 
 INSTALLED_APPS = [
@@ -35,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'mailing',
     'products',
     'rest_framework',
