@@ -13,6 +13,7 @@ fi
 
 python manage.py makemigrations
 python manage.py migrate
+python manage.py collectstatic
 
 if [ "$DJANGO_SUPERUSER_USERNAME" ]
 then

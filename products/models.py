@@ -7,7 +7,7 @@ class Cars(models.Model):
     gear = models.CharField('Трансмиссия', max_length=50)
     engine = models.CharField('Объем двигателя', max_length=3)
     places = models.IntegerField('Количество мест')
-    image = models.CharField('Ссылка на изображение автомобиля', max_length=100, blank=True)
+    image = models.ImageField('Ссылка на изображение автомобиля', max_length=100, blank=True)
 
     class Meta:
         verbose_name = 'Автомобиль'

@@ -31,7 +31,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = ['http://62.113.107.56', ]
 
-CSRF_TRUSTED_ORIGINS = ['http://62.113.107.56', 'vps-server.npk-tech.online']
+CSRF_TRUSTED_ORIGINS = ['http://62.113.107.56', 'https://matveypopov.store']
 # Application definition
 
 INSTALLED_APPS = [
