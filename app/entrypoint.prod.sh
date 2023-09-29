@@ -13,6 +13,7 @@ then
 fi
 
 python manage.py collectstatic --no-input --clear
+python manage.py migrate
 
 if [ "$DJANGO_SUPERUSER_USERNAME" ]
 then
